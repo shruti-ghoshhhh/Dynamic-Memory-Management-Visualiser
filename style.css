@@ -1,16 +1,21 @@
-body{
-    background: black;
+/* Dark Mode Aesthetic */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 20px;
 }
 
-header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+h1, h2, h3 {
     color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
+    background:blue;
+    margin: 20px auto;
 }
 
+ol, ul, p{
+    padding:30px;
+}
 .meow{
-    border: medium dashed green;
+    padding: 100px;
 }
