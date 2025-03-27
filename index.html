@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Memory Management Visualiser</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Memory Management Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Dynamic Memory Management Visualiser</h1>
+        <h1>🧠 Dynamic Memory Management Visualizer</h1>
     </header>
+
     
-    <div class="meow">
-        <!-- Controls Section -->
+    <!-- Controls Section -->
+     <div class="meow">
     <div class="controls">
         <input type="number" id="memorySize" placeholder="Enter Memory Size (KB)" min="1">
         <button onclick="initializeMemory()">Initialize Memory</button>
@@ -35,6 +36,29 @@
 
     <!-- Memory Visualization -->
     <div id="memoryContainer"></div>
-    </div>
-</body>
-</html>
+</div>
+ <!-- Project Description -->
+ <section class="description">
+    <h2>📌 Project Description</h2>
+    <p>
+        This <strong>Dynamic Memory Management Visualizer</strong> is an interactive web tool that demonstrates how memory allocation and deallocation work in operating systems.
+        It helps users understand how different <strong>memory allocation strategies</strong> (First Fit, Best Fit, and Worst Fit) impact memory usage.
+    </p>
+
+    <h3>🎯 Features</h3>
+    <ul>
+        <li>✅ <strong>Memory Initialization:</strong> Users can enter the total available memory size to simulate real-world memory allocation.</li>
+        <li>✅ <strong>Process Allocation:</strong> Users can allocate memory blocks dynamically using <em>First Fit, Best Fit, or Worst Fit</em> strategies.</li>
+        <li>✅ <strong>Deallocation:</strong> Users can release memory blocks by entering the allocated block ID.</li>
+        <li>✅ <strong>Real-time Visualization:</strong> The memory allocation is <strong>animated</strong> to showcase how blocks are allocated and freed.</li>
+        <li>✅ <strong>Dark Mode UI:</strong> A modern, dark-themed interface for better readability and aesthetics.</li>
+        <li>✅ <strong>Hover Effects & Animations:</strong> Smooth transitions, glowing buttons, and memory block effects for an engaging experience.</li>
+    </ul>
+
+    <h3>🛠️ How It Works</h3>
+    <ol>
+        <li>1️⃣ <strong>Initialize Memory</strong> → Enter the total memory size and click “Initialize.”</li>
+        <li>2️⃣ <strong>Allocate Memory</strong> → Enter a process size, select an allocation strategy, and click “Allocate.”</li>
+        <li>3️⃣ <strong>Deallocate Memory</strong> → Enter the block ID and click “Deallocate.”</li>
+        <li>4️⃣ <strong>Observe Memory Changes</strong> → Watch how memory is split, allocated, and merged dynamically.</li>
+    </ol>
