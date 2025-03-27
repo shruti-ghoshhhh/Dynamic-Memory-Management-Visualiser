@@ -63,3 +63,32 @@ function allocateMemory() {
 
     renderMemory();
 }
+
+
+
+function deallocateMemory() {
+    let blockId = parseInt(document.getElementById('deallocateIndex').value);
+    let blockIndex = memory.findIndex(block => block.allocated && block.id === blockId);
+
+    if (blockIndex === -1) {
+        alert("Invalid block ID.");
+        return;
+    }
+
+    memory[blockIndex].allocated = false;
+    memory[blockIndex].id = null;
+
+    renderMemory();
+}
+
+function renderMemory() {
+    let memoryContainer = document.getElementById('memoryContainer');
+    memoryContainer.innerHTML = "";
+
+    memory.forEach((block) => {
+        let blockDiv = document.createElement("div");
+        blockDiv.classList.add("memory-block", block.allocated ? "allocated" : "free");
+        blockDiv.textContent = block.allocated ? `P${block.id} (${block.size} KB)` : `Free (${block.size} KB)`;
+        memoryContainer.appendChild(blockDiv);
+    });
+}
