@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dynamic Memory Management Visualiser</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Dynamic Memory Management Visualiser</h1>
+    </header>
     
+    <div class="meow">
+        <!-- Controls Section -->
+    <div class="controls">
+        <input type="number" id="memorySize" placeholder="Enter Memory Size (KB)" min="1">
+        <button onclick="initializeMemory()">Initialize Memory</button>
+    </div>
+
+    <div class="controls">
+        <input type="number" id="processSize" placeholder="Enter Process Size (KB)" min="1">
+        <select id="allocationStrategy">
+            <option value="firstFit">First Fit</option>
+            <option value="bestFit">Best Fit</option>
+            <option value="worstFit">Worst Fit</option>
+        </select>
+        <button onclick="allocateMemory()">Allocate</button>
+    </div>
+
+    <div class="controls">
+        <input type="number" id="deallocateIndex" placeholder="Enter Block ID to Deallocate">
+        <button onclick="deallocateMemory()">Deallocate</button>
+    </div>
+
+    <!-- Memory Visualization -->
+    <div id="memoryContainer"></div>
+    </div>
 </body>
 </html>
